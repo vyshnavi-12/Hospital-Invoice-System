@@ -57,6 +57,17 @@ hospital-invoice-system/
 │       └── useFilters.ts       # Filtering logic hook
 └── public/                     # Static assets
 ```
+## My Learning Process
+
+### Challenges I Faced
+- Initially struggled with the date filtering logic
+- Had to research proper TypeScript interfaces for invoice data
+- Learned about Tailwind responsive design while building this
+  
+### Technologies I Learned
+- Next.js 14 App Router (was new to me)
+- Advanced Tailwind CSS layouts
+- TypeScript interfaces (was new to me)
 
 ## 🚦 Getting Started
 
