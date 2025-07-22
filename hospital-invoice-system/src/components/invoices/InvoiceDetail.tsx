@@ -21,29 +21,29 @@ const InvoiceDetail: React.FC<InvoiceDetailProps> = ({ invoice, isPrintView = fa
       </div>
 
       {/* Invoice Details */}
-      <div className="grid grid-cols-2 gap-8 mb-6">
+      <div className="flex justify-between mb-6">
         <div>
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Invoice Details:</h3>
           <div className="space-y-2 text-sm">
-            <div className="flex justify-between">
-              <span className="font-medium">Invoice No:</span>
+            <div>
+              <span className="font-medium">Invoice No: </span>
               <span>{invoice.invoiceNo}</span>
             </div>
-            <div className="flex justify-between">
-              <span className="font-medium">Visit ID:</span>
+            <div>
+              <span className="font-medium">Visit ID: </span>
               <span>{invoice.visitId}</span>
             </div>
-            <div className="flex justify-between">
-              <span className="font-medium">Type of Payment Mode:</span>
+            <div>
+              <span className="font-medium">Type of Payment Mode: </span>
               <span>{invoice.paymentMode}</span>
             </div>
           </div>
         </div>
         <div className="text-right">
-          <div className="space-y-2 text-sm">
+          <div className="space-y-2 text-sm mt-10">
             <div>
-              <span className="font-medium">Date:</span>
-              <span className="ml-2">{invoice.date}</span>
+              <span className="font-medium">Date: </span>
+              <span>{invoice.date}</span>
             </div>
           </div>
         </div>
@@ -54,16 +54,16 @@ const InvoiceDetail: React.FC<InvoiceDetailProps> = ({ invoice, isPrintView = fa
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Invoice To:</h3>
         <div className="space-y-2 text-sm">
           <div>
-            <span className="font-medium">Patient Name:</span>
-            <span className="ml-2">{invoice.patientName}</span>
+            <span className="font-medium">Patient Name: </span>
+            <span>{invoice.patientName}</span>
           </div>
           <div>
-            <span className="font-medium">Mobile:</span>
-            <span className="ml-2">{invoice.mobile}</span>
+            <span className="font-medium">Mobile: </span>
+            <span>{invoice.mobile}</span>
           </div>
           <div>
-            <span className="font-medium">Address:</span>
-            <span className="ml-2">{invoice.address}</span>
+            <span className="font-medium">Address: </span>
+            <span>{invoice.address}</span>
           </div>
         </div>
       </div>
@@ -71,7 +71,7 @@ const InvoiceDetail: React.FC<InvoiceDetailProps> = ({ invoice, isPrintView = fa
       {/* Invoice Type */}
       <div className="mb-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">
-          Invoice: {invoice.paymentMode}
+          Invoice : {invoice.paymentMode}
         </h3>
       </div>
 
@@ -122,25 +122,25 @@ const InvoiceDetail: React.FC<InvoiceDetailProps> = ({ invoice, isPrintView = fa
 
       {/* Footer Details */}
       <div className="space-y-2 text-sm mb-6">
-        <div className="flex justify-between">
-          <span className="font-medium">Billed By:</span>
+        <div>
+          <span className="font-medium">Billed By: </span>
           <span>{invoice.billedBy}</span>
         </div>
-        <div className="flex justify-between">
-          <span className="font-medium">Status:</span>
+        <div>
+          <span className="font-medium">Status: </span>
           <span>{invoice.status}</span>
         </div>
-        <div className="flex justify-between">
-          <span className="font-medium">Net Tax collection:</span>
+        <div>
+          <span className="font-medium">Net Tax collection: </span>
           <span>0.00</span>
         </div>
-        <div className="flex justify-between">
-          <span className="font-medium">Payment Method Used:</span>
+        <div>
+          <span className="font-medium">Payment Method Used: </span>
           <span>{invoice.paymentMode}</span>
         </div>
         {invoice.paymentTxnNumber && (
-          <div className="flex justify-between">
-            <span className="font-medium">Payment Txn number:</span>
+          <div>
+            <span className="font-medium">Payment Txn number: </span>
             <span>{invoice.paymentTxnNumber}</span>
           </div>
         )}
@@ -148,30 +148,30 @@ const InvoiceDetail: React.FC<InvoiceDetailProps> = ({ invoice, isPrintView = fa
 
       {/* Amount in Words */}
       <div className="mb-6">
-        <div className="bg-blue-600 text-white p-2 inline-block">
-          <span className="font-medium">Amount in Words:</span>
-          <span className="ml-2">{invoice.amountInWords}</span>
+        <div className="bg-blue-600 text-white p-3 inline-block rounded">
+          <span className="font-medium">Amount in Words: </span>
+          <span>{invoice.amountInWords}</span>
         </div>
-        <div className="text-sm text-gray-600 mt-1">
+        <div className="text-sm text-gray-600 mt-2">
           For: A1 Medical Center
         </div>
       </div>
 
       {/* Disclaimer */}
-      <div className="border-t pt-4">
-        <p className="text-xs text-gray-500">
-          <span className="font-medium">Disclaimer:</span> This is a system-generated invoice copy and does not require any seal or signature. 
+      <div className="border-t pt-4 mb-6">
+        <p className="text-xs text-gray-500 leading-relaxed">
+          <span className="font-medium">Disclaimer: </span>This is a system-generated invoice copy and does not require any seal or signature. 
           In case of any changes in the billed services or amount, the final invoice can be verified using our app. 
           Any excess amount paid in cash or card will be kept in the patient account. For further assistance, contact our support team.
         </p>
       </div>
 
       {!isPrintView && (
-        <div className="mt-6 text-center">
-          <p className="text-gray-600 mb-4">Thank you for visiting our facility. We wish you a healthy life with us.</p>
+        <div className="text-center space-y-4">
+          <p className="text-gray-600">Thank you for visiting our facility. We wish you a healthy life with us.</p>
           <Link
             href={`/print/${invoice.id}`}
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
+            className="inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors"
             target="_blank"
           >
             Print Invoice

@@ -16,38 +16,38 @@ interface OverviewProps {
 const Overview: React.FC<OverviewProps> = ({ data, totals }) => {
   return (
     <div className="space-y-6">
-      {/* Summary Cards */}
+      {/* Summary Cards - Vertical List Style */}
       <div className="bg-gray-50 p-6 rounded-lg">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-4 text-right">
-          <div>
-            <p className="text-sm text-gray-600">Total Gross:</p>
-            <p className="text-lg font-semibold text-gray-900">
+        <div className="space-y-3">
+          <div className="flex justify-between items-center">
+            <span className="text-sm text-gray-600">Total Gross:</span>
+            <span className="text-lg font-semibold text-gray-900">
               {formatCurrency(totals.totalGross)}
-            </p>
+            </span>
           </div>
-          <div>
-            <p className="text-sm text-gray-600">Total Discount:</p>
-            <p className="text-lg font-semibold text-gray-900">
+          <div className="flex justify-between items-center">
+            <span className="text-sm text-gray-600">Total Discount:</span>
+            <span className="text-lg font-semibold text-gray-900">
               {formatCurrency(totals.totalDiscount)}
-            </p>
+            </span>
           </div>
-          <div>
-            <p className="text-sm text-gray-600">Total Net (after Discount):</p>
-            <p className="text-lg font-semibold text-gray-900">
+          <div className="flex justify-between items-center">
+            <span className="text-sm text-gray-600">Total Net (after Discount):</span>
+            <span className="text-lg font-semibold text-gray-900">
               {formatCurrency(totals.totalNetAfterDiscount)}
-            </p>
+            </span>
           </div>
-          <div>
-            <p className="text-sm text-gray-600">Total Patient Share:</p>
-            <p className="text-lg font-semibold text-gray-900">
+          <div className="flex justify-between items-center">
+            <span className="text-sm text-gray-600">Total Patient Share:</span>
+            <span className="text-lg font-semibold text-gray-900">
               {formatCurrency(totals.totalPatientShare)}
-            </p>
+            </span>
           </div>
-          <div>
-            <p className="text-sm text-gray-600 font-medium">Total Net (excluding Patient Share):</p>
-            <p className="text-lg font-bold text-gray-900">
+          <div className="flex justify-between items-center border-t pt-3">
+            <span className="text-sm text-gray-600 font-medium">Total Net (excluding Patient Share):</span>
+            <span className="text-lg font-bold text-gray-900">
               {formatCurrency(totals.totalNetExcludingPatientShare)}
-            </p>
+            </span>
           </div>
         </div>
       </div>
