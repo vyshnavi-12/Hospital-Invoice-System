@@ -63,6 +63,7 @@ hospital-invoice-system/
 - Initially struggled with the date filtering logic
 - Had to research proper TypeScript interfaces for invoice data
 - Learned about Tailwind responsive design while building this
+- struggled with app routing in next.js initially
   
 ### Technologies I Learned
 - Next.js 14 App Router (was new to me)
@@ -104,64 +105,6 @@ hospital-invoice-system/
 
 4. **Open your browser**
    Navigate to [http://localhost:3000/](http://localhost:3000/)
-
-## 📄 Available Pages
-
-### 1. Dashboard (`/dashboard`)
-- **Overview Tab**: Shows period-wise breakdown with financial totals
-- **Patient-Wise Tab**: Shows individual patient invoice details
-- Filter by patient type and date range
-- Summary cards with key financial metrics
-
-### 2. Invoice List (`/invoices`)
-- Complete list of all invoices
-- Date range filtering
-- Export to PDF/CSV functionality
-- Clickable invoice numbers for detailed view
-
-### 3. Invoice Detail (`/invoices/[id]`)
-- Detailed invoice view
-- Shows all line items
-- Patient information
-- Payment details
-- Print invoice option
-
-### 4. Print View (`/print/[id]`)
-- Print-optimized invoice layout
-- Auto-print functionality
-- Clean, professional format
-
-## 🎨 Key Components
-
-### UI Components
-- **Header**: Hospital information with optional user info and export buttons
-- **DatePicker**: Date selection with proper formatting
-- **Select**: Dropdown with custom styling
-- **Button**: Consistent button styling with variants
-- **Navigation**: Tab navigation for dashboard
-
-### Data Management
-- **useFilters**: Custom hook for filtering data
-- **Mock Data**: Realistic sample data for invoices and patients
-- **Types**: Comprehensive TypeScript interfaces
-
-## 📱 Responsive Design
-
-- **Mobile-first approach**
-- **Breakpoints**: 
-  - `sm`: 640px+
-  - `md`: 768px+
-  - `lg`: 1024px+
-  - `xl`: 1280px+
-- **No horizontal scrolling**
-- **Touch-friendly interface**
-
-## 🖨️ Print Functionality
-
-- Dedicated print layouts
-- CSS print media queries
-- Auto-print on print page load
-- Print-optimized styling
 
 ## 🔧 Build and Deploy
 
