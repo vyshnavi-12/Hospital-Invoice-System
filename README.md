@@ -91,7 +91,7 @@ hospital-invoice-system/
    ```
 
 4. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
+   Navigate to [https://hospital-invoice-system-erls.vercel.app/dashboard](https://hospital-invoice-system-erls.vercel.app/dashboard)
 
 ## 📄 Available Pages
 
