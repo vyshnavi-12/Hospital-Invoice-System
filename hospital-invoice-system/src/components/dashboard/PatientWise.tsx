@@ -88,7 +88,7 @@ const PatientWise: React.FC<PatientWiseProps> = ({ data, totals }) => {
         </table>
       </div>
 
-      {/* Summary - Vertical List Style */}
+      {/* Summary */}
       <div className="bg-gray-50 p-6 rounded-lg">
         <div className="space-y-3">
           <div className="flex justify-between items-center">

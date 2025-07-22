@@ -16,7 +16,7 @@ interface OverviewProps {
 const Overview: React.FC<OverviewProps> = ({ data, totals }) => {
   return (
     <div className="space-y-6">
-      {/* Summary Cards - Vertical List Style */}
+      {/* Summary Cards */}
       <div className="bg-gray-50 p-6 rounded-lg">
         <div className="space-y-3">
           <div className="flex justify-between items-center">
