@@ -1,6 +1,7 @@
 # Hospital Invoice Management System
 
 A comprehensive hospital invoice management system built with Next.js, TypeScript, and Tailwind CSS.
+[Visit Site](https://hospital-invoice-system-erls.vercel.app/dashboard)
 
 ## 🚀 Features
 
@@ -91,7 +92,7 @@ hospital-invoice-system/
    ```
 
 4. **Open your browser**
-   Navigate to [https://hospital-invoice-system-erls.vercel.app/dashboard](https://hospital-invoice-system-erls.vercel.app/dashboard)
+   Navigate to [http://localhost:3000/](http://localhost:3000/)
 
 ## 📄 Available Pages
 
